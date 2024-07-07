@@ -298,6 +298,28 @@ footer {
   margin-left: 5px;
 }
 
+.accordion1 {
+  background-color: #fff;
+  color: #009933;
+  cursor: pointer;
+  padding: 2px;
+  width: auto;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 10%;
+}
+
+.accordion1:after {
+  content: '[\02795  Coverage]'; 
+  font-size: 13px;
+  font-weight: bold;
+  color: #777;
+  float: left;
+  margin-left: 5px;
+}
+
 .active:after {
   content: "[\2796  Abstract]";
 }
