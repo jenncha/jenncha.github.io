@@ -85,17 +85,17 @@ hr {
   margin: 0 0 20px;
 }
 
-/* ----- Fixed, scrollable sidebar (wider) ----- */
+/* ----- Fixed, scrollable sidebar (narrower) ----- */
 /* Left aligns to the centered wrapper using a viewport-based calc. */
 
 header {
-  width: 380px;                     /* was 280px */
+  width: 340px;                    /* was 380px */
   position: fixed;
-  top: 50px;                        /* matches body top padding */
-  bottom: 50px;                     /* leaves a little breathing room */
-  overflow-y: auto;                 /* enable internal scrolling */
+  top: 50px;                       /* matches body top padding */
+  bottom: 50px;                    /* leaves a little breathing room */
+  overflow-y: auto;                /* enable internal scrolling */
   -webkit-overflow-scrolling: touch;
-  left: calc((100vw - 960px) / 2);  /* align with centered .wrapper */
+  left: calc((100vw - 960px) / 2); /* align with centered .wrapper */
   /* float removed: it has no effect on fixed elements */
 }
 
@@ -138,7 +138,7 @@ header ul a strong { font-size: 14px; display: block; color: #222; }
 /* Push content to the right so it doesn't slide under the fixed sidebar. */
 section {
   width: auto;
-  margin-left: 440px; /* 380px sidebar + ~60px gap (was 340px) */
+  margin-left: 400px; /* 340px sidebar + ~60px gap (was 440px) */
   padding-bottom: 50px;
   float: none;        /* no floats with fixed layout */
 }
@@ -146,7 +146,7 @@ section {
 /* ----- Footer ----- */
 /* Avoid overlap with fixed header; make footer static on wide screens. */
 footer {
-  width: 380px; /* keep footer aligned with wider sidebar */
+  width: 340px; /* keep footer aligned with narrower sidebar */
   float: none;
   position: static;
   -webkit-font-smoothing: subpixel-antialiased;
