@@ -270,3 +270,15 @@ footer {
   overflow: hidden;
   border-radius: 1%;
 }
+
+header {
+  width: 300px; /* was 280px */
+}
+
+section {
+  margin-left: 360px; /* 300px sidebar + ~60px gap (was 340px) */
+}
+
+footer {
+  width: 300px; /* keep footer aligned with sidebar */
+}
