@@ -281,7 +281,7 @@ footer {
 
 /* ----- Desktop-only overrides that were previously breaking mobile ----- */
 @media screen and (min-width: 981px) {
-  header { width: 300px; }              /* desktop sidebar width */
-  section { margin-left: 360px; }       /* 300px sidebar + ~60px gap */
-  footer { width: 300px; }              /* align footer with sidebar */
+  header { width: 340px; }
+  section { margin-left: 400px; }
+  footer { width: 340px; }
 }
