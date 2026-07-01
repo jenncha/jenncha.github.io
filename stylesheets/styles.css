@@ -70,8 +70,10 @@ header {
   /* float removed: it has no effect on fixed elements */
 }
 
-/* Old header nav styles kept (unused in current markup but harmless) */
-header ul {
+/* ----- Header navigation (only if used) ----- */
+/* These styles only apply to a navigation list with class="nav" */
+
+header ul.nav {
   list-style: none;
   height: 40px;
   padding: 0;
@@ -80,15 +82,23 @@ header ul {
   border: 1px solid #e0e0e0;
   width: 270px;
 }
-header li {
+
+header ul.nav li {
   width: 89px;
   float: left;
   border-right: 1px solid #e0e0e0;
   height: 40px;
 }
-header li:first-child a { border-radius: 5px 0 0 5px; }
-header li:last-child a { border-radius: 0 5px 5px 0; }
-header ul a {
+
+header ul.nav li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+
+header ul.nav li:last-child a {
+  border-radius: 0 5px 5px 0;
+}
+
+header ul.nav a {
   line-height: 1;
   font-size: 11px;
   color: #999;
@@ -97,16 +107,55 @@ header ul a {
   padding-top: 6px;
   height: 34px;
 }
-header ul a:hover { color: #999; }
-header ul a:active { background-color: #f0f0f0; }
-header ul li + li + li {
-  border-right: none;
-  width: 89px;
+
+header ul.nav a:hover {
+  color: #999;
 }
-header ul a strong {
+
+header ul.nav a:active {
+  background-color: #f0f0f0;
+}
+
+header ul.nav li + li + li {
+  border-right: none;
+}
+
+header ul.nav a strong {
   font-size: 14px;
   display: block;
   color: #222;
+}
+
+/* ----- Updates list ----- */
+
+header ul.updates-list {
+  list-style: disc;
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  padding-left: 18px;
+  margin: 0 0 15px;
+}
+
+header ul.updates-list li {
+  float: none;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+header ul.updates-list a {
+  display: inline;
+  padding: 0;
+  height: auto;
+  line-height: inherit;
+  font-size: inherit;
+  color: #39c;
+  text-align: left;
 }
 
 /* ----- Main content column ----- */
