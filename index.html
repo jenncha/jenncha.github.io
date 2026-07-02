@@ -25,22 +25,45 @@
 
     <style>
       /* Jump-to menu */
-      .jumpto { font-size: 0.95em; margin: 2px 0 16px; line-height: 1.5; }
+      .jumpto {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin: 0 0 16px;
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        z-index: 10;
+      }
 
-      /* Standardised metadata hierarchy for Publications / Working Papers / Work in Progress */
-      ul.bullet-list li.entry { margin-bottom: 14px; line-height: 1.35; }
-      .entry-title { font-size: 1em; }
+      /* Standardised three-level hierarchy for every research output:
+         1. Title (most prominent) 2. Journal/venue/date (de-emphasized)
+         3. Coauthors (regular body text, not gray) */
+      .entry { margin-bottom: 18px; }
+      .entry-title { font-size: 1.05em; }
       .entry-title a, .entry-title-text { font-style: italic; }
-      .entry-meta { font-size: 0.85em; color: #777; margin-top: 2px; }
-      .entry-meta a { color: #777; }
-      .entry-links { font-size: 0.8em; color: #999; margin-top: 3px; }
-      .entry-links a { color: #999; }
 
-      /* Standardised hierarchy for Policy Writing / Discussions */
-      .item { margin-bottom: 12px; line-height: 1.35; }
-      .item-title { font-style: italic; }
-      .item-meta { font-size: 0.85em; color: #777; }
-      .item-meta a { color: #777; }
+      .metadata {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.4;
+        margin-top: 2px;
+      }
+      .metadata a { color: #666; }
+
+      .coauthors {
+        font-size: 0.95em;
+        line-height: 1.4;
+        margin-top: 2px;
+      }
+
+      .supplementary {
+        color: #666;
+        font-size: 0.90em;
+        margin-top: 4px;
+      }
+      .supplementary a { color: #666; }
 
       /* Slightly tighter vertical rhythm throughout */
       header p { margin-bottom: 12px; }
@@ -157,10 +180,8 @@
 
 		<li class="entry">
 			<div class="entry-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022199626000097" target="_blank">Trade Fragmentation, Inflationary Pressures and Monetary Policy</a></div>
-			<div class="entry-meta">
-				<b><i>Journal of International Economics</i></b>, Forthcoming
-				&middot; with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a>
-			</div>
+			<div class="metadata"><b><i>Journal of International Economics</i></b>, Forthcoming</div>
+				<div class="coauthors">with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section01">
 				How does trade fragmentation affect inflationary pressures? What is the response
@@ -176,7 +197,7 @@
 				highlighted by the model. We compare outcomes under Taylor-type monetary policy
 				rules to a constrained-efficient allocation.
 			</div>
-			<div class="entry-links">
+			<div class="supplementary">
 				<u>Coverage</u>: <a href="https://www.project-syndicate.org/commentary/inflationary-pressures-from-aging-deglobalization-climate-and-immigration-policies-by-raghuram-g-rajan-2024-07?utm_source=Project+Syndicate+Newsletter&utm_campaign=cadc13635f-sunday_newsletter_07_14_2024&utm_medium=email&utm_term=0_73bad5b7d8-cadc13635f-104305549&mc_cid=cadc13635f&mc_eid=d7c6ad6008" target="_blank">[Bracing for a More Inflationary World? by R. G. Rajan]</a>
 				<a href="https://www.bankofengland.co.uk/speech/2025/february/swati-dhingra-speech-dow-lecture-niesr-trade-fragmentation-and-monetary-policy" target="_blank">[Between a Shock and a Hard Place: Trade Fragmentation and Monetary Policy − speech by Swati Dhingra]</a>
 				<a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op365~362d801aee.en.pdf" target="_blank">[ECB Report of the IRC Workstream on Trade Fragmentation: Navigating a Fragmenting Global Trading System]</a>
@@ -189,9 +210,7 @@
 
 		<li class="entry">
 			<div class="entry-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022053124001340" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Sentiments'});" target="_blank">Monetary Policy and Sentiment-Driven Fluctuations</a></div>
-			<div class="entry-meta">
-				<b><i>Journal of Economic Theory</i></b>, Vol. 222, December 2024
-			</div>
+			<div class="metadata"><b><i>Journal of Economic Theory</i></b>, Vol. 222, December 2024</div>
 			<button class="accordion"></button>
 			<div class="panel" id="section02">
 				Sentiments, or beliefs about aggregate demand, can be self-fulfilling in models departing slightly from the
@@ -204,7 +223,7 @@
 				Moreover, the Taylor principle is no longer sufficient to rule out indeterminacy. Instead, an interest rate
 				rule that places sufficiently low weight on inflation eliminates non-fundamental volatility and thereby the output-inflation trade-off.
 			</div>
-			<div class="entry-links">
+			<div class="supplementary">
 				<u>Coverage</u>: <a href="https://www.bankofengland.co.uk/speech/2022/january/catherine-l-mann-speech-on-the-economy-and-monetary-policy-at-omfif" target="_blank">On returning inflation back to target − speech by Catherine L Mann</a>
 				<br><u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2024/monetary-policy-and-sentiment-driven-fluctuations" target="_blank">[Bank of England Staff Working Paper]</a>
 				<a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-20-Paper.pdf" target="_blank">[Centre for Macroeconomics Discussion Paper]</a>
@@ -214,10 +233,8 @@
 
 		<li class="entry">
 			<div class="entry-title"><a href="https://www.sciencedirect.com/science?_ob=GatewayURL&_origin=AUTHORALERT&_method=citationSearch&_piikey=S0304393224000734&_version=1&md5=0ceb3feb7a5e5a0e810eb5fb30139961" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Gas-TANK'});" target="_blank">Energy Prices and Household Heterogeneity: Monetary Policy in a Gas-TANK</a></div>
-			<div class="entry-meta">
-				<b><i>Journal of Monetary Economics</i></b>, Vol. 147, October 2024
-				&middot; with <a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a> and <a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a>
-			</div>
+			<div class="metadata"><b><i>Journal of Monetary Economics</i></b>, Vol. 147, October 2024</div>
+				<div class="coauthors">with <a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a> and <a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section03">
 				How does household heterogeneity affect the transmission of an energy price shock? What
@@ -233,7 +250,7 @@
 				effect of an energy price shock on demand cannot be generalized to alternate supply shocks,
 				as the specific nature of the supply shock affects how resources are redistributed in the economy.
 			</div>
-			<div class="entry-links">
+			<div class="supplementary">
 				<u>Coverage</u>: <a href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">[The path to 2 per cent − speech by Silvana Tenreyro]</a>
 				<a href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">[Monetary policy in the face of supply shocks − speech by Silvana Tenreyro]</a>
 				<a href="https://www.bis.org/review/r230703b.htm" target="_blank">[Structural changes in energy markets and implications for inflation and monetary policy − speech by Ida Wolden Bache]</a>
@@ -251,10 +268,8 @@
 
 		<li class="entry">
 			<div class="entry-title"><a href="/papers/handbook_final.pdf" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Handbook'});" target="_blank">Spatial Inequality, Regional Growth and Economic Geography</a></div>
-			<div class="entry-meta">
-				<b><i>Oxford Handbook of Income Distribution and Economic Growth</i></b>, Forthcoming
-				&middot; with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> and <a href="https://www.bristol.ac.uk/people/person/Helen-Simpson-cc309297-12ad-44e0-ac84-b12c7ac90fd8/" target="_blank">Helen Simpson</a>
-			</div>
+			<div class="metadata"><b><i>Oxford Handbook of Income Distribution and Economic Growth</i></b>, Forthcoming</div>
+				<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> and <a href="https://www.bristol.ac.uk/people/person/Helen-Simpson-cc309297-12ad-44e0-ac84-b12c7ac90fd8/" target="_blank">Helen Simpson</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section04">
 				This chapter explores the patterns of spatial income disparities within countries throughout the 20th Century.
@@ -265,7 +280,7 @@
 				quantitative economic geography and macroeconomics. Finally, we examine the evidence on the impact of
 				“place-based policies,” focusing on large-scale programs designed to promote regional convergence.
 			</div>
-			<div class="entry-links">
+			<div class="supplementary">
 				<u>Other versions</u>: <a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2025/CFMDP2025-24-Paper.pdf" target="_blank">[Centre for Macroeconomics Discussion Paper]</a>
 				<a href="https://www.bankofengland.co.uk/working-paper/2025/spatial-inequality-regional-growth-and-economic-geography" target="_blank">[Bank of England Staff Working Paper]</a>
 			</div>
@@ -278,9 +293,7 @@
 
 		<li class="entry">
 			<div class="entry-title"><a href="/papers/Sticky_production_SWP.pdf" target="_blank">Sticky Production and Monetary Policy</a></div>
-			<div class="entry-meta">
-				with <a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a> and <a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a>
-			</div>
+			<div class="coauthors">with <a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a> and <a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section05">
 				We study a New Keynesian model where production inputs and pricing decisions are made under information frictions.
@@ -295,7 +308,7 @@
 				Empirical evidence suggests that inflation falls following a positive surprise in industrial production, consistent with
 				a model featuring real rigidities.
 			</div>
-			<div class="entry-links">
+			<div class="supplementary">
 				<u>Other versions</u>: <a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2025/CFMDP2025-27-Paper2.pdf" target="_blank">[Centre for Macroeconomics Discussion Paper]</a>
 				<a href="https://www.bankofengland.co.uk/working-paper/2025/sticky-production-and-monetary-policy" target="_blank">[Bank of England Staff Working Paper]</a>
 			</div>
@@ -303,9 +316,7 @@
 
 		<li class="entry">
 			<div class="entry-title"><span class="entry-title-text">Productivity and Inflation Dynamics</span></div>
-			<div class="entry-meta">
-				with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a>
-			</div>
+			<div class="coauthors">with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section06">
 				How does higher productivity affect inflation? Productivity shifts both supply and demand, and its effect on
@@ -325,9 +336,7 @@
 
 		<li class="entry">
 			<div class="entry-title"><span class="entry-title-text">Conquering Distance? Geographical Isolation and Spatial Development</span></div>
-			<div class="entry-meta">
-				with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)
-			</div>
+			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)</div>
 			<button class="accordion"></button>
 			<div class="panel" id="section07">
 				What is the effect of past market access on spatial development? We study this question by constructing
@@ -372,9 +381,7 @@
 
 			<li class="entry">
 			<div class="entry-title"><span class="entry-title-text">Transportation Networks and Structural Transformation in Regions</span></div>
-			<div class="entry-meta">
-				with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)
-			</div>
+			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)</div>
 			<button class="accordion"></button>
 			<div class="panel" id="section09">
 				Since 1900, rural regions in Europe experienced more rapid income growth and
@@ -422,22 +429,20 @@
 	<h2 id="policy">Policy Writing</h2>
 	<hr>
 
-	<div class="item">
-	<div class="item-title"><a href="https://bankunderground.co.uk/2025/12/04/trade-fragmentation-and-inflationary-pressures/" target="_blank"><em>Trade Fragmentation and Inflationary Pressures</em></a></div>
-	<div class="item-meta">
-	Bank Underground, December 2025 &middot;
-	with
+	<div class="entry">
+	<div class="entry-title"><a href="https://bankunderground.co.uk/2025/12/04/trade-fragmentation-and-inflationary-pressures/" target="_blank"><em>Trade Fragmentation and Inflationary Pressures</em></a></div>
+	<div class="metadata">Bank Underground, December 2025</div>
+	<div class="coauthors">with
 	<a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a>
 	and
 	<a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a>
 	</div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><a href="https://www.bankofengland.co.uk/macro-technical-paper/2025/decompositions-forecasts-and-scenarios-from-an-estimated-dsge-model-for-the-uk-economy" target="_blank"><em>Decompositions, Forecasts and Scenarios from an Estimated DSGE Model for the UK Economy</em></a></div>
-	<div class="item-meta">
-	Bank of England Macro Technical Paper No. 1, June 2025 &middot;
-	with
+	<div class="entry">
+	<div class="entry-title"><a href="https://www.bankofengland.co.uk/macro-technical-paper/2025/decompositions-forecasts-and-scenarios-from-an-estimated-dsge-model-for-the-uk-economy" target="_blank"><em>Decompositions, Forecasts and Scenarios from an Estimated DSGE Model for the UK Economy</em></a></div>
+	<div class="metadata">Bank of England Macro Technical Paper No. 1, June 2025</div>
+	<div class="coauthors">with
 	<a href="https://www.danielalbuquerque.com/" target="_blank">Daniel Albuquerque</a>,
 	<a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a>,
 	<a href="https://uk.linkedin.com/in/david-latto-80691936" target="_blank">David Latto</a>,
@@ -447,22 +452,20 @@
 	</div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><a href="https://bankunderground.co.uk/2024/11/26/some-implications-of-climate-policy-for-monetary-policy/" target="_blank"><em>Some Implications of Climate Policy for Monetary Policy</em></a></div>
-	<div class="item-meta">
-	Bank Underground, November 2024 &middot;
-	with
+	<div class="entry">
+	<div class="entry-title"><a href="https://bankunderground.co.uk/2024/11/26/some-implications-of-climate-policy-for-monetary-policy/" target="_blank"><em>Some Implications of Climate Policy for Monetary Policy</em></a></div>
+	<div class="metadata">Bank Underground, November 2024</div>
+	<div class="coauthors">with
 	<a href="https://sites.google.com/view/francescadiluiso/home" target="_blank">Francesca Diluiso</a>
 	and
 	<a href="https://uk.linkedin.com/in/bwanengkirtyo" target="_blank">Boromeus Wanengkirtyo</a>
 	</div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><a href="https://bankunderground.co.uk/2024/08/02/monetary-policy-in-a-gas-tank/" target="_blank"><em>Monetary Policy in a Gas-TANK</em></a></div>
-	<div class="item-meta">
-	Bank Underground, August 2024 &middot;
-	with
+	<div class="entry">
+	<div class="entry-title"><a href="https://bankunderground.co.uk/2024/08/02/monetary-policy-in-a-gas-tank/" target="_blank"><em>Monetary Policy in a Gas-TANK</em></a></div>
+	<div class="metadata">Bank Underground, August 2024</div>
+	<div class="coauthors">with
 	<a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a>
 	and
 	<a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a>
@@ -472,83 +475,67 @@
 	<h2 id="discussions">Discussions</h2>
 	<hr>
 
-	<div class="item">
-	<div class="item-title"><em>Monetary Policy, Inequality, and Redistribution</em></div>
-	<div class="item-meta">
-	Jennifer La'O and Wendy Morrison &middot;
-	Banca d'Italia 2nd Annual Research Conference &middot;
-	<a href="/teaching/CHAN_BdI_discussion.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Monetary Policy, Inequality, and Redistribution</em></div>
+	<div class="metadata">Banca d'Italia 2nd Annual Research Conference</div>
+	<div class="coauthors">Jennifer La'O and Wendy Morrison</div>
+	<div class="supplementary"><a href="/teaching/CHAN_BdI_discussion.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Carbon Pricing and Firms' Expectations: Evidence from Italy</em></div>
-	<div class="item-meta">
-	Giacomo Mangiante &middot;
-	CEBRA 2025 &middot;
-	<a href="/teaching/CEBRA2025_Discussion_Final.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Carbon Pricing and Firms' Expectations: Evidence from Italy</em></div>
+	<div class="metadata">CEBRA 2025</div>
+	<div class="coauthors">Giacomo Mangiante</div>
+	<div class="supplementary"><a href="/teaching/CEBRA2025_Discussion_Final.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Optimal Monetary Policy during a Cost-of-Living Crisis</em></div>
-	<div class="item-meta">
-	Alan Olivi, Vincent Sterk, and Dajana Xhani &middot;
-	E1 Workshop in Quantitative Macroeconomics &middot;
-	<a href="/teaching/e1-Discussion.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Optimal Monetary Policy during a Cost-of-Living Crisis</em></div>
+	<div class="metadata">E1 Workshop in Quantitative Macroeconomics</div>
+	<div class="coauthors">Alan Olivi, Vincent Sterk, and Dajana Xhani</div>
+	<div class="supplementary"><a href="/teaching/e1-Discussion.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>The Aggregate and Distributional Effects of a Carbon Tax</em></div>
-	<div class="item-meta">
-	Christian Proebsting &middot;
-	National Bank of Belgium International Biennial Research Conference 2024 &middot;
-	<a href="/teaching/NBB-Discussion.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>The Aggregate and Distributional Effects of a Carbon Tax</em></div>
+	<div class="metadata">National Bank of Belgium International Biennial Research Conference 2024</div>
+	<div class="coauthors">Christian Proebsting</div>
+	<div class="supplementary"><a href="/teaching/NBB-Discussion.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Pass-Through of Cost-Push Shocks</em></div>
-	<div class="item-meta">
-	Isabel Gödl-Hanisch and Manuel Menkhoff &middot;
-	Lisbon Macro Workshop &middot;
-	<a href="/teaching/Lisbon-DiscussionGodl-HanischMenkhoff.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Pass-Through of Cost-Push Shocks</em></div>
+	<div class="metadata">Lisbon Macro Workshop</div>
+	<div class="coauthors">Isabel Gödl-Hanisch and Manuel Menkhoff</div>
+	<div class="supplementary"><a href="/teaching/Lisbon-DiscussionGodl-HanischMenkhoff.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Looking Through Supply Shocks versus Controlling Inflation Expectations: Understanding the Central Bank Dilemma</em></div>
-	<div class="item-meta">
-	Paul Beaudry, Thomas J. Carter, and Amartya Lahiri &middot;
-	BIS–BoE–ECB–IMF Conference on Policy Challenges and International Spillovers in Times of High Inflation &middot;
-	<a href="/teaching/Spillovers-DiscussionBeaudryCarterLahiri.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Looking Through Supply Shocks versus Controlling Inflation Expectations: Understanding the Central Bank Dilemma</em></div>
+	<div class="metadata">BIS–BoE–ECB–IMF Conference on Policy Challenges and International Spillovers in Times of High Inflation</div>
+	<div class="coauthors">Paul Beaudry, Thomas J. Carter, and Amartya Lahiri</div>
+	<div class="supplementary"><a href="/teaching/Spillovers-DiscussionBeaudryCarterLahiri.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Experience-Based Heterogeneity in Expectations and Monetary Policy</em></div>
-	<div class="item-meta">
-	Lucas Radke and Florian Wicknig &middot;
-	Czech National Bank Conference: Expectations in Dynamic Macroeconomic Models 2021 &middot;
-	<a href="/teaching/CNB-DiscussionRadkeWicknig.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Experience-Based Heterogeneity in Expectations and Monetary Policy</em></div>
+	<div class="metadata">Czech National Bank Conference: Expectations in Dynamic Macroeconomic Models 2021</div>
+	<div class="coauthors">Lucas Radke and Florian Wicknig</div>
+	<div class="supplementary"><a href="/teaching/CNB-DiscussionRadkeWicknig.pdf" target="_blank">[slides]</a></div>
 	</div>
 
-	<div class="item">
-	<div class="item-title"><em>Hitting the Elusive Inflation Target</em></div>
-	<div class="item-meta">
-	Francesco Bianchi, Leonardo Melosi, and Mattias Rottner &middot;
-	Qatar Centre for Global Banking & Finance Annual Conference 2021 &middot;
-	<a href="/teaching/QCBGF-DiscussionBMR.pdf" target="_blank">[slides]</a>
-	</div>
+	<div class="entry">
+	<div class="entry-title"><em>Hitting the Elusive Inflation Target</em></div>
+	<div class="metadata">Qatar Centre for Global Banking & Finance Annual Conference 2021</div>
+	<div class="coauthors">Francesco Bianchi, Leonardo Melosi, and Mattias Rottner</div>
+	<div class="supplementary"><a href="/teaching/QCBGF-DiscussionBMR.pdf" target="_blank">[slides]</a></div>
 	</div>
 
 	<h2 id="teaching">Teaching</h2>
 	<hr>
 
-	<div class="item">
-	<div class="item-title"><a href="/teaching/TANK_CCBS2025.pdf">TANK Models</a></div>
+	<div class="entry">
+	<div class="entry-title"><a href="/teaching/TANK_CCBS2025.pdf">TANK Models</a></div>
 	</div>
 
 	<div class="content-footer">
