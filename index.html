@@ -72,6 +72,43 @@
       }
       .supplementary a { color: #666; }
 
+      /* Policy impact: collapsible disclosure listing speeches/reports that cited a paper */
+      .policy-impact-toggle {
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        color: #666;
+        font-size: 0.90em;
+        font-family: inherit;
+      }
+      .policy-impact-toggle:hover { color: #39c; }
+      .policy-impact-toggle .pi-arrow {
+        display: inline-block;
+        margin-left: 3px;
+      }
+
+      .policy-impact-panel {
+        display: none;
+        margin: 8px 0 4px 12px;
+      }
+      .policy-impact-panel.open { display: block; }
+
+      .policy-impact-item { margin-bottom: 6px; line-height: 1.4; }
+      .policy-impact-item:last-child { margin-bottom: 0; }
+      .policy-impact-name {
+        font-weight: 500;
+        color: #444;
+        font-size: 0.90em;
+      }
+      .policy-impact-title {
+        font-style: italic;
+        font-size: 0.90em;
+        color: #666;
+      }
+
       /* Slightly tighter vertical rhythm throughout */
       header p { margin-bottom: 12px; }
       #content p { margin-bottom: 12px; }
@@ -205,10 +242,13 @@
 				rules to a constrained-efficient allocation.
 			</div>
 			<div class="supplementary">
-				<u>Coverage</u>: <a href="https://www.project-syndicate.org/commentary/inflationary-pressures-from-aging-deglobalization-climate-and-immigration-policies-by-raghuram-g-rajan-2024-07?utm_source=Project+Syndicate+Newsletter&utm_campaign=cadc13635f-sunday_newsletter_07_14_2024&utm_medium=email&utm_term=0_73bad5b7d8-cadc13635f-104305549&mc_cid=cadc13635f&mc_eid=d7c6ad6008" target="_blank">[Bracing for a More Inflationary World? by R. G. Rajan]</a>
-				<a href="https://www.bankofengland.co.uk/speech/2025/february/swati-dhingra-speech-dow-lecture-niesr-trade-fragmentation-and-monetary-policy" target="_blank">[Between a Shock and a Hard Place: Trade Fragmentation and Monetary Policy − speech by Swati Dhingra]</a>
-				<a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op365~362d801aee.en.pdf" target="_blank">[ECB Report of the IRC Workstream on Trade Fragmentation: Navigating a Fragmenting Global Trading System]</a>
-				<a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op371.en.pdf" target="_blank">[ECB Monetary Policy Strategy Assessment 2025: A Strategic View on the Economic and Inflation Environment in the Euro Area]</a>
+				<button class="policy-impact-toggle" type="button">Policy impact <span class="pi-arrow">&#9656;</span></button>
+				<div class="policy-impact-panel">
+					<div class="policy-impact-item"><span class="policy-impact-name">R. G. Rajan</span> — <a class="policy-impact-title" href="https://www.project-syndicate.org/commentary/inflationary-pressures-from-aging-deglobalization-climate-and-immigration-policies-by-raghuram-g-rajan-2024-07?utm_source=Project+Syndicate+Newsletter&utm_campaign=cadc13635f-sunday_newsletter_07_14_2024&utm_medium=email&utm_term=0_73bad5b7d8-cadc13635f-104305549&mc_cid=cadc13635f&mc_eid=d7c6ad6008" target="_blank">Bracing for a More Inflationary World?</a></div>
+					<div class="policy-impact-item"><span class="policy-impact-name">Swati Dhingra</span> — <a class="policy-impact-title" href="https://www.bankofengland.co.uk/speech/2025/february/swati-dhingra-speech-dow-lecture-niesr-trade-fragmentation-and-monetary-policy" target="_blank">Between a Shock and a Hard Place: Trade Fragmentation and Monetary Policy</a></div>
+					<div class="policy-impact-item"><span class="policy-impact-name">ECB</span> — <a class="policy-impact-title" href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op365~362d801aee.en.pdf" target="_blank">Report of the IRC Workstream on Trade Fragmentation: Navigating a Fragmenting Global Trading System</a></div>
+					<div class="policy-impact-item"><span class="policy-impact-name">ECB</span> — <a class="policy-impact-title" href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op371.en.pdf" target="_blank">Monetary Policy Strategy Assessment 2025: A Strategic View on the Economic and Inflation Environment in the Euro Area</a></div>
+				</div>
 				<br><u>Other versions</u>: <a href="https://cepr.org/publications/dp21024" target="_blank">[CEPR WP]</a>
 				<a href="https://www.bankofengland.co.uk/working-paper/2025/trade-fragmentation-inflationary-pressures-and-monetary-policy" target="_blank">[BoE SWP]</a>
 				<a href="https://www.bis.org/publ/work1225.htm" target="_blank">[BIS Working Paper]</a>
@@ -231,7 +271,10 @@
 				rule that places sufficiently low weight on inflation eliminates non-fundamental volatility and thereby the output-inflation trade-off.
 			</div>
 			<div class="supplementary">
-				<u>Coverage</u>: <a href="https://www.bankofengland.co.uk/speech/2022/january/catherine-l-mann-speech-on-the-economy-and-monetary-policy-at-omfif" target="_blank">On returning inflation back to target − speech by Catherine L Mann</a>
+				<button class="policy-impact-toggle" type="button">Policy impact <span class="pi-arrow">&#9656;</span></button>
+				<div class="policy-impact-panel">
+					<div class="policy-impact-item"><span class="policy-impact-name">Catherine L Mann</span> — <a class="policy-impact-title" href="https://www.bankofengland.co.uk/speech/2022/january/catherine-l-mann-speech-on-the-economy-and-monetary-policy-at-omfif" target="_blank">On returning inflation back to target</a></div>
+				</div>
 				<br><u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2024/monetary-policy-and-sentiment-driven-fluctuations" target="_blank">[BoE SWP]</a>
 				<a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-20-Paper.pdf" target="_blank">[CfM DP]</a>
 			</div>
@@ -257,9 +300,12 @@
 				as the specific nature of the supply shock affects how resources are redistributed in the economy.
 			</div>
 			<div class="supplementary">
-				<u>Coverage</u>: <a href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">[The path to 2 per cent − speech by Silvana Tenreyro]</a>
-				<a href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">[Monetary policy in the face of supply shocks − speech by Silvana Tenreyro]</a>
-				<a href="https://www.bis.org/review/r230703b.htm" target="_blank">[Structural changes in energy markets and implications for inflation and monetary policy − speech by Ida Wolden Bache]</a>
+				<button class="policy-impact-toggle" type="button">Policy impact <span class="pi-arrow">&#9656;</span></button>
+				<div class="policy-impact-panel">
+					<div class="policy-impact-item"><span class="policy-impact-name">Silvana Tenreyro</span> — <a class="policy-impact-title" href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">The path to 2 per cent</a></div>
+					<div class="policy-impact-item"><span class="policy-impact-name">Silvana Tenreyro</span> — <a class="policy-impact-title" href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">Monetary policy in the face of supply shocks</a></div>
+					<div class="policy-impact-item"><span class="policy-impact-name">Ida Wolden Bache</span> — <a class="policy-impact-title" href="https://www.bis.org/review/r230703b.htm" target="_blank">Structural changes in energy markets and implications for inflation and monetary policy</a></div>
+				</div>
 				<br><u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2023/energy-prices-and-household-heterogeneity-monetary-policy-in-a-gas-tank" target="_blank">[BoE SWP]</a>
 				<a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2022/CFMDP2022-16-Paper.pdf" target="_blank">[CfM DP]</a>
 				<br><u>Code</u>: <a href="https://www.macromodelbase.com/page/rep-mmb" target="_blank">Macroeconomic Model Database (NK_CDK24)</a>
@@ -552,6 +598,16 @@
 
     <script src="javascripts/toggle_accordion.js"></script>
 
+    <script>
+      document.querySelectorAll('.policy-impact-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panel = btn.nextElementSibling;
+          var arrow = btn.querySelector('.pi-arrow');
+          var isOpen = panel.classList.toggle('open');
+          arrow.innerHTML = isOpen ? '&#9662;' : '&#9656;';
+        });
+      });
+    </script>
 
   </body>
 </html>
