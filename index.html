@@ -36,6 +36,10 @@
         border-bottom: 1px solid #e5e5e5;
         z-index: 1000;
         box-shadow: 0 1px 0 #fff, 0 -1px 0 #fff;
+		-webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        will-change: transform;
       }
 
       /* Keep jump-to targets from being hidden behind the sticky nav above */
