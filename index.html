@@ -83,9 +83,15 @@
       .content-footer p { font-size: 0.85em; color: #777; margin-bottom: 0; }
 
       /* Conferences accordion (reuses .accordion toggle) */
-      .accordion.conf:after { content: '[\02795 Conferences]'; }
-      .accordion.conf.active:after { content: '[\2796 Conferences]'; }
+      .accordion.conf:after { content: '[\02795 Presentations]'; }
+      .accordion.conf.active:after { content: '[\2796 Presentations]'; }
+      /* Indent the toggles to the same 12px as the "with ..." co-author line, on every paper */
+      .entry > button.accordion:first-of-type { margin-left: 5px; }
       .conf-note { font-size: 0.85em; color: #555; margin-top: 4px; }
+      .impact-list { margin: 2px 0 4px 0; padding-left: 8px; list-style: none; }
+      .impact-list li::before { content: "\2013\00a0"; }  /* en dash + space as the bullet */
+      /* One line per bullet; long titles end in "..." (full title shown on hover) */
+      .impact-list li { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     </style>
 
   </head>
@@ -223,11 +229,14 @@
 				<div class="conf-note">* Presented by co-author</div>
 			</div>
 			<div class="supplementary">
-				<u>Policy Impact</u>: <a href="https://www.project-syndicate.org/commentary/inflationary-pressures-from-aging-deglobalization-climate-and-immigration-policies-by-raghuram-g-rajan-2024-07?utm_source=Project+Syndicate+Newsletter&utm_campaign=cadc13635f-sunday_newsletter_07_14_2024&utm_medium=email&utm_term=0_73bad5b7d8-cadc13635f-104305549&mc_cid=cadc13635f&mc_eid=d7c6ad6008" target="_blank">[Bracing for a More Inflationary World? by R. G. Rajan]</a>
-				<a href="https://www.bankofengland.co.uk/speech/2025/february/swati-dhingra-speech-dow-lecture-niesr-trade-fragmentation-and-monetary-policy" target="_blank">[Between a Shock and a Hard Place: Trade Fragmentation and Monetary Policy − speech by Swati Dhingra]</a>
-				<a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op365~362d801aee.en.pdf" target="_blank">[ECB Report of the IRC Workstream on Trade Fragmentation: Navigating a Fragmenting Global Trading System]</a>
-				<a href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op371.en.pdf" target="_blank">[ECB Monetary Policy Strategy Assessment 2025: A Strategic View on the Economic and Inflation Environment in the Euro Area]</a>
-				<br><u>Other versions</u>: <a href="https://cepr.org/publications/dp21024" target="_blank">[CEPR DP]</a>
+				<u>Policy Impact</u>:
+				<ul class="impact-list">
+					<li><a title="Bracing for a More Inflationary World? by R. G. Rajan" href="https://www.project-syndicate.org/commentary/inflationary-pressures-from-aging-deglobalization-climate-and-immigration-policies-by-raghuram-g-rajan-2024-07?utm_source=Project+Syndicate+Newsletter&utm_campaign=cadc13635f-sunday_newsletter_07_14_2024&utm_medium=email&utm_term=0_73bad5b7d8-cadc13635f-104305549&mc_cid=cadc13635f&mc_eid=d7c6ad6008" target="_blank">Bracing for a More Inflationary World? by R. G. Rajan</a></li>
+					<li><a title="Between a Shock and a Hard Place − speech by Swati Dhingra" href="https://www.bankofengland.co.uk/speech/2025/february/swati-dhingra-speech-dow-lecture-niesr-trade-fragmentation-and-monetary-policy" target="_blank">Between a Shock and a Hard Place − speech by Swati Dhingra</a></li>
+					<li><a title="ECB Report of the IRC Workstream on Trade Fragmentation" href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op365~362d801aee.en.pdf" target="_blank">ECB Report of the IRC Workstream on Trade Fragmentation</a></li>
+					<li><a title="ECB Monetary Policy Strategy Assessment 2025" href="https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op371.en.pdf" target="_blank">ECB Monetary Policy Strategy Assessment 2025</a></li>
+				</ul>
+				<u>Other versions</u>: <a href="https://cepr.org/publications/dp21024" target="_blank">[CEPR DP]</a>
 				<a href="https://www.bankofengland.co.uk/working-paper/2025/trade-fragmentation-inflationary-pressures-and-monetary-policy" target="_blank">[BoE SWP]</a>
 				<a href="https://www.bis.org/publ/work1225.htm" target="_blank">[BIS Working Paper]</a>
 			</div>
@@ -283,10 +292,13 @@
 				<div class="conf-note">* Presented by co-author</div>
 			</div>
 			<div class="supplementary">
-				<u>Policy Impact</u>: <a href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">[The path to 2 per cent − speech by Silvana Tenreyro]</a>
-				<a href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">[Monetary policy in the face of supply shocks − speech by Silvana Tenreyro]</a>
-				<a href="https://www.bis.org/review/r230703b.htm" target="_blank">[Structural changes in energy markets and implications for inflation and monetary policy − speech by Ida Wolden Bache]</a>
-				<br><u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2023/energy-prices-and-household-heterogeneity-monetary-policy-in-a-gas-tank" target="_blank">[BoE SWP]</a>
+				<u>Policy Impact</u>:
+				<ul class="impact-list">
+					<li><a title="The path to 2 per cent − speech by Silvana Tenreyro" href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">The path to 2 per cent − speech by Silvana Tenreyro</a></li>
+					<li><a title="Monetary policy in the face of supply shocks − speech by Silvana Tenreyro" href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">Monetary policy in the face of supply shocks − speech by Silvana Tenreyro</a></li>
+					<li><a title="Structural changes in energy markets − speech by Ida Wolden Bache" href="https://www.bis.org/review/r230703b.htm" target="_blank">Structural changes in energy markets − speech by Ida Wolden Bache</a></li>
+				</ul>
+				<u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2023/energy-prices-and-household-heterogeneity-monetary-policy-in-a-gas-tank" target="_blank">[BoE SWP]</a>
 				<a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2022/CFMDP2022-16-Paper.pdf" target="_blank">[CfM DP]</a>
 				<br><u>Code</u>: <a href="https://www.macromodelbase.com/page/rep-mmb" target="_blank">Macroeconomic Model Database (NK_CDK24)</a>
 			</div>
@@ -312,8 +324,11 @@
 				“place-based policies,” focusing on large-scale programs designed to promote regional convergence.
 			</div>
 			<div class="supplementary">
-				<u>Policy Impact</u>: <a href="https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-the-annual-institute-of-economic-development-conference-london" target="_blank">The UK's Regional Growth: Unlocking the Economy's Full Potential - speech by Andrew Bailey</a>
-				<br><u>Other versions</u>: <a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2025/CFMDP2025-24-Paper.pdf" target="_blank">[CfM DP]</a>
+				<u>Policy Impact</u>:
+				<ul class="impact-list">
+					<li><a title="The UK's Regional Growth: Unlocking the Economy's Full Potential - speech by Andrew Bailey" href="https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-the-annual-institute-of-economic-development-conference-london" target="_blank">The UK's Regional Growth: Unlocking the Economy's Full Potential - speech by Andrew Bailey</a></li>
+				</ul>
+				<u>Other versions</u>: <a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2025/CFMDP2025-24-Paper.pdf" target="_blank">[CfM DP]</a>
 				<a href="https://www.bankofengland.co.uk/working-paper/2025/spatial-inequality-regional-growth-and-economic-geography" target="_blank">[BoE SWP]</a>
 			</div>
 		</li>
@@ -353,10 +368,12 @@
 				<br><u>Media Coverage</u>: 
 				<a href="https://www.reuters.com/business/ai-productivity-gains-may-not-curb-inflation-imfs-tenreyro-warns-2026-08-20/" target="_blank">[Reuters]</a>
         		<a href="https://www.thisismoney.co.uk/money/markets/article-16070297/Bank-England-insiders-warn-AI-boom-push-rates-Britain.html" target="_blank">[This is Money]</a>
-				<br><u>Policy Impact</u>: <a href="https://www.imf.org/en/news/articles/2026/09/07/sp090726-md-monetary-policy-with-supply-shocks-and-high-debt" target="_blank">[Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva]</a>
-										  <a href="https://www.youtube.com/live/-EgL8TvOagQ?si=KqjQUtPRRfcPH-6J" target="_blank">[G30 41st Annual International Banking Seminar − remarks by Andrew Bailey]</a>
-				
-			</div>
+				<br><u>Policy Impact</u>:
+				<ul class="impact-list">
+					<li><a title="Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva" href="https://www.imf.org/en/news/articles/2026/09/07/sp090726-md-monetary-policy-with-supply-shocks-and-high-debt" target="_blank">Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva</a></li>
+					<li><a title="G30 41st Annual International Banking Seminar − remarks by Andrew Bailey" href="https://www.youtube.com/live/-EgL8TvOagQ?si=KqjQUtPRRfcPH-6J" target="_blank">G30 41st Annual International Banking Seminar − remarks by Andrew Bailey</a></li>
+				</ul>
+				</div>
 		</li>
 		
 		<li class="entry">
