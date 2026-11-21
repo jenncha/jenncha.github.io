@@ -87,6 +87,15 @@
       .accordion.conf.active:after { content: '[\2796 Presentations]'; }
       /* Indent the toggles to the same 12px as the "with ..." co-author line, on every paper */
       .entry > button.accordion:first-of-type { margin-left: 5px; }
+      /* Policy Impact / Other versions / etc. line up with the toggles and the "with ..." line */
+      .entry > .supplementary:not(.indent) { margin-left: 12px; }
+      /* Text size the page has always rendered at (previously set by unclosed <font size="2"> tags) */
+      header, section, footer { font-size: 13px; }
+      header > h2:first-child { font-size: 18px; }  /* keep the name heading at its original size */
+      /* Cite (BibTeX) toggle */
+      .accordion.cite:after { content: '[\02795 Cite]'; }
+      .accordion.cite.active:after { content: '[\2796 Cite]'; }
+      .cite-panel pre { margin: 0 0 8px; padding: 6px 8px; font-size: 11px; line-height: 1.4; background: #fff; white-space: pre-wrap; word-break: break-word; }
       .conf-note { font-size: 0.85em; color: #555; margin-top: 4px; }
       .impact-list { margin: 2px 0 4px 0; padding-left: 8px; list-style: none; }
       .impact-list li::before { content: "\2013\00a0"; }  /* en dash + space as the bullet */
@@ -98,16 +107,16 @@
   <body>
     <div class="wrapper">
       <header>
-        <h2 style="text-align: center; position: relative; left: -25px;"><font size="3"><b>Jenny Chan</b></font></h2>
+        <h2 style="text-align: center; position: relative; left: -25px;"><span style="font-size: 16px;"><b>Jenny Chan</b></span></h2>
 
 	<h4><img src='images/Photo_JC4.jpg' width="222" height="281" style="border-radius: 8px; display: block; margin: 0 auto; position: relative; left: -25px;"></h4>
 
-    <p><font size="2"><b>Welcome to my website!</b>
-	<br></b>Adviser, External MPC Unit, <a href="https://www.bankofengland.co.uk/" target="https://www.bankofengland.co.uk/">Bank of England</a>
-	<br></b>Research Affiliate, MEF and IMF, <a href="https://cepr.org/" target="https://cepr.org/">CEPR</a>
-	<br></b>Member, <a href="https://www.lse.ac.uk/CFM" target="_blank">Centre for Macroeconomics</a></a><p>
+    <p><b>Welcome to my website!</b>
+	<br>Adviser, External MPC Unit, <a href="https://www.bankofengland.co.uk/" target="_blank">Bank of England</a>
+	<br>Research Affiliate, MEF and IMF, <a href="https://cepr.org/" target="_blank">CEPR</a>
+	<br>Member, <a href="https://www.lse.ac.uk/CFM" target="_blank">Centre for Macroeconomics</a></p>
 
-	<p><font size="2">I received my Ph.D. in Economics from <a href="https://www.upf.edu/en/web/econ" target="_blank">Universitat Pompeu Fabra</a>. Please find my CV <a href="/cv/CV_JChan_Sep2026.pdf" target="_blank">here</a>.<p>
+	<p>I received my Ph.D. in Economics from <a href="https://www.upf.edu/en/web/econ" target="_blank">Universitat Pompeu Fabra</a>. Please find my CV <a href="/cv/CV_JChan_Sep2026.pdf" target="_blank">here</a>.<p>
 
 	<p><b>Research Interests</b>
 	<br>Macroeconomics &middot; Monetary Policy &middot; Information Frictions</p>
@@ -205,7 +214,7 @@
 	<ul class="bullet-list">
 
 		<li class="entry">
-			<div class="entry-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022199626000097" target="_blank">Trade Fragmentation, Inflationary Pressures and Monetary Policy</a></div>
+			<div class="entry-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022199626000097" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Trade Fragmentation'});" target="_blank">Trade Fragmentation, Inflationary Pressures and Monetary Policy</a></div>
 			<div class="metadata"><b><i>Journal of International Economics</i></b>, Vol. 163, Oct 2026</div>
 				<div class="coauthors">with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a></div>
 			<button class="accordion"></button>
@@ -228,6 +237,16 @@
 				NBER International Seminar on Macroeconomics*, 23rd BIS Annual Conference*, IMF 25th Annual Research Conference, EEA-ESEM*, SED Copenhagen, Reserve Bank of Australia Annual Conference, ECB – FRB Cleveland Inflation: Drivers and Dynamics Conference, Banca d’Italia Annual Research Conference, 27th Annual DNB Research Conference, CEPR Paris Symposium, CEPR – ESSIM, CEPR-RISE Workshop, CEBRA, FRB International Finance Seminar, ECB DGE Seminar, ECB Seminar*, IMF ICD seminar*, Banca d’Italia Seminar*, Banque de France – TSE Seminar, AMSE – Banque de France Workshop in Macroeconomics, MMF Macro and Finance Research Group Workshop*, 25th IWH-CIREQ-GW-BOKERI Workshop*, 3rd XAmsterdam Macroeconomic Workshop, Collegio Carlo Alberto Workshop, Università Cattolica del Sacro Cuore
 				<div class="conf-note">* Presented by co-author</div>
 			</div>
+			<button class="accordion cite"></button>
+			<div class="panel cite-panel"><pre>@article{AmbrosinoChanTenreyro2026,
+  author  = {Ambrosino, M. Ludovica and Chan, Jenny and Tenreyro, Silvana},
+  title   = {Trade Fragmentation, Inflationary Pressures and Monetary Policy},
+  journal = {Journal of International Economics},
+  volume  = {163},
+  pages   = {104219},
+  year    = {2026},
+  doi     = {10.1016/j.jinteco.2026.104219}
+}</pre></div>
 			<div class="supplementary">
 				<u>Policy Impact</u>:
 				<ul class="impact-list">
@@ -261,6 +280,16 @@
 			<div class="panel" id="section02-conf">
 				European Economic Association, European Winter Meeting of the Econometric Society, RES Annual Conference, Bank of Finland – CEPR Joint Conference on Monetary Policy Tools, 53rd Annual Conference of the Money, Macro and Finance Society, ESCB Research Cluster on Monetary Economics - Fourth Annual Workshop, LSE-CfM London Workshop, Fall 2022 Midwest Macro Meeting, T2M 2022, BSE Summer Forum, SAEe 2018 (Symposium of the Spanish Economic Association), 18th Workshop on Macroeconomic Dynamics (Università di Pavia), XXIII Workshop on Dynamic Macroeconomics (Universidade de Vigo), Bergamo Workshop in Economics and Statistics, Sailing the Macro Workshop, Barcelona GSE PhD Jamboree
 			</div>
+			<button class="accordion cite"></button>
+			<div class="panel cite-panel"><pre>@article{Chan2024,
+  author  = {Chan, Jenny},
+  title   = {Monetary Policy and Sentiment-Driven Fluctuations},
+  journal = {Journal of Economic Theory},
+  volume  = {222},
+  pages   = {105928},
+  year    = {2024},
+  doi     = {10.1016/j.jet.2024.105928}
+}</pre></div>
 			<div class="supplementary">
 				<u>Other versions</u>: <a href="https://www.bankofengland.co.uk/working-paper/2024/monetary-policy-and-sentiment-driven-fluctuations" target="_blank">[BoE SWP]</a>
 				<a href="https://www.lse.ac.uk/CFM/assets/pdf/CFM-Discussion-Papers-2020/CFMDP2020-20-Paper.pdf" target="_blank">[CfM DP]</a>
@@ -291,6 +320,16 @@
 				EEA*, Annual IJCB Research Conference*, Banque de France-CEPR-ECB Conference on Monetary Policy Challenges for European Macroeconomies, 25th Annual DNB Research Conference*, 25th Central Bank Macroeconomic Modeling Workshop*, CESifo Area Conference on Macro, Money, and International Finance*, PSE-CEPR Policy Forum, Banque de France – Pierre Werner Chair (EUI) Conference, 2nd BoE-CfM-EUI-LSE Workshop on International Macroeconomics and Finance, 7th Annual Workshop of the ESCB Research Cluster 2, European Stability Mechanism Workshop, CEMLA*, ECB IPA Seminar, FRB Cleveland Brownbag Seminar, BSE Summer Forum, HEC Lausanne, Helsinki GSE, Bristol Macro Brownbag Seminar, CEF*, 17th Dynare Conference*, Lisbon Macro Workshop, QCGBF Annual Conference, 3rd Catalan Economic Society Congress
 				<div class="conf-note">* Presented by co-author</div>
 			</div>
+			<button class="accordion cite"></button>
+			<div class="panel cite-panel"><pre>@article{ChanDizKanngiesser2024,
+  author  = {Chan, Jenny and Diz, Sebastian and Kanngiesser, Derrick},
+  title   = {Energy Prices and Household Heterogeneity: Monetary Policy in a Gas-TANK},
+  journal = {Journal of Monetary Economics},
+  volume  = {147},
+  pages   = {103620},
+  year    = {2024},
+  doi     = {10.1016/j.jmoneco.2024.103620}
+}</pre></div>
 			<div class="supplementary">
 				<u>Policy Impact</u>:
 				<ul class="impact-list">
@@ -323,6 +362,14 @@
 				quantitative economic geography and macroeconomics. Finally, we examine the evidence on the impact of
 				“place-based policies,” focusing on large-scale programs designed to promote regional convergence.
 			</div>
+			<button class="accordion cite"></button>
+			<div class="panel cite-panel"><pre>@incollection{ChanEllingsenSimpson2026,
+  author    = {Chan, Jenny and Ellingsen, Sebastian and Simpson, Helen},
+  title     = {Spatial Inequality, Regional Growth and Economic Geography},
+  booktitle = {Oxford Handbook of Income Distribution and Economic Growth},
+  publisher = {Oxford University Press},
+  year      = {forthcoming}
+}</pre></div>
 			<div class="supplementary">
 				<u>Policy Impact</u>:
 				<ul class="impact-list">
@@ -339,7 +386,7 @@
 	<ul class="bullet-list">
 
 			<li class="entry">
-			<div class="entry-title"><a href="/papers/Productivity_Inflation.pdf" target="_blank">Productivity and Inflation Dynamics</a></div>
+			<div class="entry-title"><a href="/papers/Productivity_Inflation.pdf" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Productivity and Inflation'});" target="_blank">Productivity and Inflation Dynamics</a></div>
 			<div class="coauthors">with <a href="https://sites.google.com/view/marialudovicaambrosino/home" target="_blank">M. Ludovica Ambrosino</a> and <a href="https://personal.lse.ac.uk/tenreyro/" target="_blank">Silvana Tenreyro</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section06">
@@ -362,22 +409,22 @@
 				ECB Conference on Monetary Policy, Reserve Bank of New Zealand, FRB Cleveland Brownbag Seminar, Australian National University, University of Melbourne, Monash University, International and Monetary Economics Network Research Seminar, 7th HeiTüHo Workshop
 			</div>
 			<div class="supplementary">
+				<u>Policy Impact</u>:
+				<ul class="impact-list">
+					<li><a title="Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva" href="https://www.imf.org/en/news/articles/2026/09/07/sp090726-md-monetary-policy-with-supply-shocks-and-high-debt" target="_blank">Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva</a></li>
+					<li><a title="G30 41st Annual International Banking Seminar − remarks by Andrew Bailey" href="https://www.youtube.com/live/-EgL8TvOagQ?si=KqjQUtPRRfcPH-6J" target="_blank">G30 41st Annual International Banking Seminar − remarks by Andrew Bailey</a></li>
+				</ul>
 				<u>Other versions</u>:
 				<a href="https://www.bankofengland.co.uk/working-paper/2026/productivity-and-inflation-dynamics" target="_blank">[BoE SWP]</a>
 				<a href="https://cepr.org/publications/dp21876" target="_blank">[CEPR DP]</a>
 				<br><u>Media Coverage</u>: 
 				<a href="https://www.reuters.com/business/ai-productivity-gains-may-not-curb-inflation-imfs-tenreyro-warns-2026-08-20/" target="_blank">[Reuters]</a>
         		<a href="https://www.thisismoney.co.uk/money/markets/article-16070297/Bank-England-insiders-warn-AI-boom-push-rates-Britain.html" target="_blank">[This is Money]</a>
-				<br><u>Policy Impact</u>:
-				<ul class="impact-list">
-					<li><a title="Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva" href="https://www.imf.org/en/news/articles/2026/09/07/sp090726-md-monetary-policy-with-supply-shocks-and-high-debt" target="_blank">Monetary Policy with Supply Shocks and High Debt − remarks by Kristalina Georgieva</a></li>
-					<li><a title="G30 41st Annual International Banking Seminar − remarks by Andrew Bailey" href="https://www.youtube.com/live/-EgL8TvOagQ?si=KqjQUtPRRfcPH-6J" target="_blank">G30 41st Annual International Banking Seminar − remarks by Andrew Bailey</a></li>
-				</ul>
-				</div>
+			</div>
 		</li>
 		
 		<li class="entry">
-			<div class="entry-title"><a href="/papers/Sticky_production_SWP.pdf" target="_blank">Sticky Production and Monetary Policy</a></div>
+			<div class="entry-title"><a href="/papers/Sticky_production_SWP.pdf" onclick="gtag('event', 'download', {'event_category': 'Downloads', 'event_label': 'Sticky Production'});" target="_blank">Sticky Production and Monetary Policy</a></div>
 			<div class="coauthors">with <a href="https://sites.google.com/view/sebastian-diz/home" target="_blank">Sebastian Diz</a> and <a href="https://sites.google.com/view/derrickkanngiesser/home" target="_blank">Derrick Kanngiesser</a></div>
 			<button class="accordion"></button>
 			<div class="panel" id="section05">
