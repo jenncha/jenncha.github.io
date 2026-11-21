@@ -97,6 +97,10 @@
       .impact-list li::before { content: "\2013\00a0"; }  /* en dash + space as the bullet */
       /* One line per bullet; long titles end in "..." (full title shown on hover) */
       .impact-list li { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      /* On phones/narrow screens, show the full title: wrap instead of "...", with the dash hanging */
+      @media screen and (max-width: 740px) {
+        .impact-list li { white-space: normal; overflow: visible; text-overflow: clip; padding-left: 0.9em; text-indent: -0.9em; }
+      }
     </style>
 
   </head>
