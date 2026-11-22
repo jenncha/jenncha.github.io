@@ -26,7 +26,11 @@
     <style>
       /* Jump-to menu */
       .jumpto {
-        font-size: 0.95em;
+        font-size: 10.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #999;  /* colour of the dots between links */
         line-height: 1.5;
         margin: 0 0 16px;
         padding: 16px 0;
@@ -41,6 +45,10 @@
         -webkit-backface-visibility: hidden;
         will-change: transform;
       }
+
+      .jumpto a { padding: 2px 0; color: #333; }
+      .jumpto a:hover { color: #39c; }
+      .jumpto a:hover { text-decoration: none; border-bottom: 2px solid #39c; }
 
       /* Keep jump-to targets from being hidden behind the sticky nav above */
       h2[id], h3[id] { scroll-margin-top: 100px; }
@@ -73,7 +81,11 @@
       }
       .supplementary a { color: #666; }
 
-      header p { margin-bottom: 12px; }
+      header p { margin-bottom: 8px; }
+      /* Compact sidebar so it fits on a laptop screen without scrolling */
+      header h4 { margin: 0; }
+      header h2.sidebar-name { margin: 14px 0 0; font-size: 13px; line-height: 1.5; color: #222; }
+      @media screen and (min-width: 981px) { header { bottom: 20px; } }
       #content p { margin-bottom: 12px; }
       #content h3 { margin-bottom: 10px; }
       #content hr { margin-bottom: 15px; }
@@ -91,7 +103,7 @@
       .entry > .supplementary:not(.indent) { margin-left: 12px; }
       /* Text size the page has always rendered at (previously set by unclosed <font size="2"> tags) */
       header, section, footer { font-size: 13px; }
-      header > h2:first-child { font-size: 18px; }  /* keep the name heading at its original size */
+      header > h2 { font-size: 18px; }  /* keep the name heading at its original size */
       .conf-note { font-size: 0.85em; color: #555; margin-top: 4px; }
       .impact-list { margin: 2px 0 4px 0; padding-left: 8px; list-style: none; }
       .impact-list li::before { content: "\2013\00a0"; }  /* en dash + space as the bullet */
@@ -107,12 +119,10 @@
   <body>
     <div class="wrapper">
       <header>
-        <h2 style="text-align: center; position: relative; left: -25px;"><span style="font-size: 16px;"><b>Jenny Chan</b></span></h2>
+	<h4><img src='images/Photo_JC4.jpg' width="222" height="257" style="border-radius: 8px; display: block; margin: 0; object-fit: cover; object-position: 50% 100%;"></h4>
+        <h2 class="sidebar-name"><b>Jenny Chan</b></h2>
 
-	<h4><img src='images/Photo_JC4.jpg' width="222" height="281" style="border-radius: 8px; display: block; margin: 0 auto; position: relative; left: -25px;"></h4>
-
-    <p><b>Welcome to my website!</b>
-	<br>Adviser, External MPC Unit, <a href="https://www.bankofengland.co.uk/" target="_blank">Bank of England</a>
+    <p>Adviser, External MPC Unit, <a href="https://www.bankofengland.co.uk/" target="_blank">Bank of England</a>
 	<br>Research Affiliate, MEF and IMF, <a href="https://cepr.org/" target="_blank">CEPR</a>
 	<br>Member, <a href="https://www.lse.ac.uk/CFM" target="_blank">Centre for Macroeconomics</a></p>
 
@@ -125,7 +135,7 @@
 
 	<div style="font-size:0.9em; line-height:1.3;">
 
-	<p style="margin:0 0 8px 12px; line-height:1.3;">
+	<p style="margin:0 0 5px 12px; line-height:1.3;">
 	<span style="color:#666;">[Aug 2026]</span>
 	<span style="color:#b22222;"><b>Updated working paper.</b></span>
 	<a href="/papers/handbook_final.pdf" target="_blank">
@@ -133,7 +143,7 @@
 	</a>
 	</p>
 		
-	<p style="margin:0 0 8px 12px; line-height:1.3;">
+	<p style="margin:0 0 5px 12px; line-height:1.3;">
 	<span style="color:#666;">[Aug 2026]</span>
 	<span style="color:#b22222;"><b>New working paper.</b></span>
 	<a href="/papers/Productivity_Inflation.pdf" target="_blank">
@@ -141,15 +151,7 @@
 	</a>
 	</p>
 		
-	<p style="margin:0 0 8px 12px; line-height:1.3;">
-	<span style="color:#666;">[Jun 2026]</span>
-	<span style="color:#b22222;"><b>Slides.</b></span>
-	<a href="/teaching/CHAN_sticky_production_SummerForum.pdf" target="_blank">
-	<i>Sticky Production and Monetary Policy</i>
-	</a>
-	</p>
-
-	<p style="margin:0 0 8px 12px; line-height:1.3;">
+	<p style="margin:0 0 5px 12px; line-height:1.3;">
 	<span style="color:#666;">[Jan 2026]</span>
 	<a href="https://www.sciencedirect.com/science/article/abs/pii/S0022199626000097" target="_blank">
 	<i>Trade Fragmentation, Inflationary Pressures, and Monetary Policy</i>
@@ -157,7 +159,7 @@
 	accepted - <i>Journal of International Economics</i>
 	</p>
 
-	<p style="margin:0 0 8px 12px; line-height:1.3;">
+	<p style="margin:0 0 5px 12px; line-height:1.3;">
 	<span style="color:#666;">[Nov 2025]</span>
 	<span style="color:#b22222;"><b>New working paper.</b></span>
 	<a href="/papers/Sticky_production_SWP.pdf" target="_blank">
