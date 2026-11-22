@@ -165,7 +165,7 @@ header ul.updates-list a {
 /* Push content to the right so it doesn't slide under the fixed sidebar. */
 section {
   width: auto;
-  margin-left: 400px; /* 340px sidebar + 60px gap */
+  margin-left: 480px; /* 340px sidebar + 140px gap */
   padding-bottom: 50px;
   float: none; /* no floats with fixed layout */
 }
@@ -285,6 +285,6 @@ footer {
 /* ----- Desktop-only overrides that were previously breaking mobile ----- */
 @media screen and (min-width: 981px) {
   header { width: 340px; }
-  section { margin-left: 400px; }
+  section { margin-left: 480px; }
   footer { width: 340px; }
 }
