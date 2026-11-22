@@ -243,7 +243,7 @@ footer {
 }
 .accordion:after {
   content: '[\02795 Abstract]';
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: bold;
   color: #777;
   float: left;
@@ -264,7 +264,7 @@ footer {
 }
 .accordion1:after {
   content: '[\02795 Coverage]';
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: bold;
   color: #777;
   float: left;
