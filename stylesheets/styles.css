@@ -242,7 +242,7 @@ footer {
   border-radius: 10%;
 }
 .accordion:after {
-  content: '[\02795 Abstract]';
+  content: '[+ Abstract]';
   font-size: 13.5px;
   font-weight: bold;
   color: #777;
@@ -263,7 +263,7 @@ footer {
   border-radius: 10%;
 }
 .accordion1:after {
-  content: '[\02795 Coverage]';
+  content: '[+ Coverage]';
   font-size: 13.5px;
   font-weight: bold;
   color: #777;
@@ -271,7 +271,7 @@ footer {
   margin-left: 5px;
 }
 
-.active:after { content: "[\2796 Abstract]"; }
+.active:after { content: "[\2212  Abstract]"; }
 
 .panel {
   padding: 8px 8px 0 8px;
