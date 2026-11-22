@@ -26,13 +26,13 @@
     <style>
       /* Jump-to menu */
       .jumpto {
-        font-size: 10.5px;
+        font-size: 11.5px;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.03em;
         color: #999;  /* colour of the dots between links */
         line-height: 1.5;
-        margin: -35px 0 12px;  /* links sit in the top margin; Research starts a little below the photo top */
+        margin: -35px 0 20px;  /* links sit in the top margin; space below before "Research" */
         padding: 0 0 6px;
         position: sticky;
         top: 17px;  /* stays exactly where it starts (body top padding 44px - 27px pull-up) */
@@ -47,6 +47,7 @@
       }
 
       .jumpto a { padding: 2px 0; color: #333; }
+      .jumpto .sep { font-size: 1.5em; line-height: 0; vertical-align: -0.1em; color: #aaa; }
       .jumpto a:hover { color: #39c; }
       .jumpto a:hover { text-decoration: none; border-bottom: 2px solid #39c; }
 
@@ -206,12 +207,12 @@
         <div id="content">
 
 	<nav class="jumpto">
-	<a href="#published-articles">Published Papers</a> &middot;
-	<a href="#books-chapters">Handbook Chapters</a> &middot;
-	<a href="#working-papers">Working Papers</a> &middot;
-	<a href="#work-in-progress">Work in Progress</a> &middot;
-	<a href="#policy">Policy Writing</a> &middot;
-	<a href="#discussions">Discussions</a> &middot;
+	<a href="#published-articles">Published Papers</a> <span class="sep">&bull;</span>
+	<a href="#books-chapters">Handbook Chapters</a> <span class="sep">&bull;</span>
+	<a href="#working-papers">Working Papers</a> <span class="sep">&bull;</span>
+	<a href="#work-in-progress">Work in Progress</a> <span class="sep">&bull;</span>
+	<a href="#policy">Policy Writing</a> <span class="sep">&bull;</span>
+	<a href="#discussions">Discussions</a> <span class="sep">&bull;</span>
 	<a href="#teaching">Teaching</a>
 	</nav>
 
