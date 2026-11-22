@@ -69,7 +69,7 @@ header {
   bottom: 50px; /* leaves a little breathing room */
   overflow-y: auto; /* enable internal scrolling */
   -webkit-overflow-scrolling: touch;
-  left: calc((100vw - var(--page-w)) / 2); /* align with centered .wrapper */
+  left: calc((100vw - var(--page-w)) / 2 + 40px); /* centered .wrapper edge, nudged 40px toward the middle */
   /* float removed: it has no effect on fixed elements */
 }
 
