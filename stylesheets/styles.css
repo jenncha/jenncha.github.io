@@ -22,8 +22,11 @@ a:hover { text-decoration: underline; }
 a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 a:hover small { color: #777; }
 
+/* Page width: grows with the window up to 1140px, keeping at least 50px each side */
+:root { --page-w: min(1140px, calc(100vw - 100px)); }
+
 .wrapper {
-  width: 960px;
+  width: var(--page-w);
   margin: 0 auto;
   position: relative; /* ensure we can line up fixed header using viewport calc */
 }
@@ -66,7 +69,7 @@ header {
   bottom: 50px; /* leaves a little breathing room */
   overflow-y: auto; /* enable internal scrolling */
   -webkit-overflow-scrolling: touch;
-  left: calc((100vw - 960px) / 2); /* align with centered .wrapper */
+  left: calc((100vw - var(--page-w)) / 2); /* align with centered .wrapper */
   /* float removed: it has no effect on fixed elements */
 }
 
@@ -240,7 +243,7 @@ footer {
 }
 .accordion:after {
   content: '[\02795 Abstract]';
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   color: #777;
   float: left;
@@ -261,7 +264,7 @@ footer {
 }
 .accordion1:after {
   content: '[\02795 Coverage]';
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   color: #777;
   float: left;
