@@ -32,14 +32,14 @@
         letter-spacing: 0.04em;
         color: #999;  /* colour of the dots between links */
         line-height: 1.5;
-        margin: 0 0 16px;
-        padding: 16px 0;
+        margin: -35px 0 12px;  /* links sit in the top margin; Research starts a little below the photo top */
+        padding: 0 0 6px;
         position: sticky;
-        top: 0;
+        top: 17px;  /* stays exactly where it starts (body top padding 44px - 27px pull-up) */
         background: #fff;
         border-bottom: 1px solid #e5e5e5;
         z-index: 1000;
-        box-shadow: 0 1px 0 #fff, 0 -1px 0 #fff;
+        box-shadow: 0 -17px 0 #fff;  /* white strip above, so scrolled text never shows over the links */
 		-webkit-transform: translateZ(0);
         transform: translateZ(0);
         -webkit-backface-visibility: hidden;
@@ -53,7 +53,7 @@
       /* Keep jump-to targets from being hidden behind the sticky nav above */
       h2[id], h3[id] { scroll-margin-top: 100px; }
 
-      .entry { margin-bottom: 18px; }
+      .entry { margin-bottom: 12px; }
       .entry-title { font-size: 1.05em; }
       .entry-title a, .entry-title-text { font-style: italic; }
 
@@ -104,6 +104,12 @@
       /* Text size the page has always rendered at (previously set by unclosed <font size="2"> tags) */
       header, section, footer { font-size: 14.5px; }
       header > h2 { font-size: 18px; }  /* keep the name heading at its original size */
+      #content > h2 { font-size: 20px; }  /* Research / Policy Writing / Discussions / Teaching */
+      #content > h2 { margin-bottom: 10px; }
+      #content > hr { margin-bottom: 14px; }
+      .entry > button.accordion { padding-top: 0; padding-bottom: 0; }
+      .entry > .supplementary { margin-top: 2px; }
+      @media screen and (max-width: 980px) { .jumpto { margin-top: 0; padding-top: 6px; } }  /* single-column layout: keep the links below the sidebar */
       .conf-note { font-size: 0.85em; color: #555; margin-top: 4px; }
       .impact-list { margin: 2px 0 4px 0; padding-left: 8px; list-style: none; }
       .impact-list li::before { content: "\2013\00a0"; }  /* en dash + space as the bullet */
