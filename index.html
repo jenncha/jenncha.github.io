@@ -125,10 +125,15 @@
         .impact-list li { white-space: normal; overflow: visible; text-overflow: clip; padding-left: 0.9em; text-indent: -0.9em; }
       }
       /* Decluttered styling: plain labels, no-bracket links, quieter co-author names */
-      .label { color: #888; font-weight: 600; }
-      .supplementary .dot, header .dot { color: #bbb; margin: 0 3px; font-size: 1.15em; line-height: 0; }
+      .label { color: #888; font-weight: 600; margin-right: 4px; }
+      .supplementary .dot, header .dot { color: #bbb; margin: 0 1px; font-size: 0.75em; line-height: 0; vertical-align: 0.1em; }
       .coauthors a { color: #555; }
       .coauthors a:hover { color: #39c; }
+      /* Dotted underline so Policy Impact items and slides read as links */
+      .impact-list a, .supplementary.indent a, a.media { text-decoration: underline dotted; text-decoration-color: #aaa; text-underline-offset: 3px; }
+      .impact-list a:hover, .supplementary.indent a:hover, a.media:hover { color: #39c; text-decoration-color: #39c; }
+      /* Extra space before each main section */
+      #content > h2[id] { margin-top: 48px; }
     </style>
 
   </head>
@@ -317,7 +322,7 @@
 				<ul class="impact-list">
 					<li><a title="The path to 2 per cent − speech by Silvana Tenreyro" href="https://www.bankofengland.co.uk/speech/2022/november/silvana-tenreyro-keynote-speech-at-the-society-of-professional-economists-annual-conference" target="_blank">The path to 2 per cent − speech by Silvana Tenreyro</a></li>
 					<li><a title="Monetary policy in the face of supply shocks − speech by Silvana Tenreyro" href="https://www.ecb.europa.eu/pub/conferences/ecbforum/shared/pdf/2023/Tenreyro_paper.pdf" target="_blank">Monetary policy in the face of supply shocks − speech by Silvana Tenreyro</a></li>
-					<li><a title="Structural changes in energy markets and implications for inflation and monetary policy − speech by Ida Wolden Bache" href="https://www.bis.org/review/r230703b.htm" target="_blank">Structural changes in energy markets and monetary policy − speech by Ida Wolden Bache</a></li>
+					<li><a title="Structural changes in energy markets and implications for inflation and monetary policy − speech by Ida Wolden Bache" href="https://www.bis.org/review/r230703b.htm" target="_blank">Structural changes in energy markets − speech by Ida Wolden Bache</a></li>
 				</ul>
 				<span class="label">Code:</span> <a href="https://www.macromodelbase.com/page/rep-mmb" target="_blank">Macroeconomic Model Database (NK_CDK24)</a>
 			</div>
@@ -385,8 +390,8 @@
 					<li><a title="G30 41st Annual International Banking Seminar − remarks by Andrew Bailey" href="https://www.youtube.com/live/-EgL8TvOagQ?si=KqjQUtPRRfcPH-6J" target="_blank">G30 41st Annual International Banking Seminar − remarks by Andrew Bailey</a></li>
 				</ul>
 				<span class="label">Media Coverage:</span> 
-				<a href="https://www.reuters.com/business/ai-productivity-gains-may-not-curb-inflation-imfs-tenreyro-warns-2026-08-20/" target="_blank">Reuters</a> <span class="dot">&bull;</span>
-        		<a href="https://www.thisismoney.co.uk/money/markets/article-16070297/Bank-England-insiders-warn-AI-boom-push-rates-Britain.html" target="_blank">This is Money</a>
+				<a class="media" href="https://www.reuters.com/business/ai-productivity-gains-may-not-curb-inflation-imfs-tenreyro-warns-2026-08-20/" target="_blank">Reuters</a> <span class="dot">&bull;</span>
+        		<a class="media" href="https://www.thisismoney.co.uk/money/markets/article-16070297/Bank-England-insiders-warn-AI-boom-push-rates-Britain.html" target="_blank">This is Money</a>
 				<br><span class="label">Other versions:</span>
 				<a href="https://www.bankofengland.co.uk/working-paper/2026/productivity-and-inflation-dynamics" target="_blank">BoE SWP</a> <span class="dot">&bull;</span>
 				<a href="https://cepr.org/publications/dp21876" target="_blank">CEPR DP</a>
@@ -448,7 +453,7 @@
 
 			<li class="entry">
 			<div class="entry-title"><span class="entry-title-text">Transportation Networks and Structural Transformation in Regions</span></div>
-			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)</div>
+			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available on request)</div>
 			<button class="accordion"></button>
 			<div class="panel" id="section09">
 				Since 1900, rural regions in Europe experienced more rapid income growth and
@@ -467,7 +472,7 @@
 
 			<li class="entry">
 			<div class="entry-title"><span class="entry-title-text">Conquering Distance? Geographical Isolation and Spatial Development</span></div>
-			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available upon request)</div>
+			<div class="coauthors">with <a href="https://sebastianellingsen.github.io/" target="_blank">Sebastian Ellingsen</a> (draft available on request)</div>
 			<button class="accordion"></button>
 			<div class="panel" id="section07">
 				What is the effect of past market access on spatial development? We study this question by constructing
