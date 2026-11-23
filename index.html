@@ -135,6 +135,11 @@
       .impact-list a:hover, .supplementary.indent a:hover, a.media:hover { color: #39c; text-decoration-color: #39c; }
       /* Extra space before each main section */
       #content > h2[id] { margin-top: 48px; }
+      /* Sidebar links: text colour with a light dotted underline, blue on hover (CV link stays blue) */
+      header a, header a[style] { color: #444 !important; text-decoration: underline dotted; text-decoration-color: #aaa; text-underline-offset: 3px; }
+      header a:hover, header a[style]:hover { color: #39c !important; text-decoration-color: #39c; }
+      header a.cv-link { color: #39c !important; text-decoration: none; }
+      header a.cv-link:hover { text-decoration: underline; }
     </style>
 
   </head>
@@ -149,7 +154,7 @@
 	<br>Member, <a href="https://www.lse.ac.uk/CFM" target="_blank">Centre for Macroeconomics</a>
 	<br>Ph.D., <a href="https://www.upf.edu/en/web/econ" target="_blank">Universitat Pompeu Fabra</a></p>
 
-	<p>Welcome to my website! Please find my CV <a href="/cv/CV_JChan_Sep2026.pdf" target="_blank">here</a>.</p>
+	<p>Welcome to my website! Please find my CV <a class="cv-link" href="/cv/CV_JChan_Sep2026.pdf" target="_blank">here</a>.</p>
 
 	<p><b>Research Interests</b>
 	<br>Macroeconomics &middot; Monetary Policy &middot; Information Frictions</p>
